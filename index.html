@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Driving Ai </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onkeydown="keypress(event)" onkeyup="keyup(event)">
+        <h1> Self-learning cars </h1>
+        
+        <div class="ai">
+            <h2> Neural network with genetic algorithm </h2>
+            
+            <p> These self-learning cars learn to drive with neural networks and genetic algorithms. </p>
+            
+            <h1 id="text"> Generation #1 </h1>
+            <canvas id="canvas" width="600" height="400"></canvas>
+
+            <p id="checkbox" class="checkbox" onclick="checkbox()"> Show only one </p>
+            <p id="button" class="checkbox" onclick="ai.nextGen()"> Skip to next Generation </p>
+            
+            <p> All cars can detect the distance to the wall in three directions. Every drawn direction in the image is an input to the network. </p>
+            
+            <div id="neuralnetwork">
+                <div>
+                    <img src="Img.png" height="330">
+                    <p class="imgTxt"> All the directions where the car can see.<br>The angels are written in radians. </p>
+                </div>
+                <div>
+                    <canvas id = "network" width="300" height="275"></canvas>
+                    <p class="imgTxt"> There is the current neural network of the blue car in the image. Black dots are neurons. Bigger neurons have a bigger bias value. Blue lines are negative connections and red lines positive. </p>
+                </div>
+            </div>
+            
+            <p> There is the current neural network of the blue car in the image. Black dots are neurons. Bigger neurons have a bigger bias value. Blue lines are negative connections and red lines positive. </p>
+        </div>
+        
+        <div class="footer">
+            <h3> Touko Paivansalo 2019 </h3>
+        </div>
+        
+        <script src="Code.js"></script>
+    </body>
+</html>
